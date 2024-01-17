@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'backend.laba5.urls'
+ROOT_URLCONF = 'laba5.urls'
 
 TEMPLATES = [
     {
