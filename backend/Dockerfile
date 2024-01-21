@@ -1,4 +1,4 @@
-FROM python:3.12
+FROM python:3.11
 LABEL authors="flamboyx"
 
 ENV PYTHONDONTWRITEBYTECODE 1
