@@ -4,7 +4,7 @@
             <div class="p-4 bg-white border border-gray-200 text-center rounded-lg">
                 <img :src="user.get_avatar" class="mb-6 rounded-full">
                 
-                <p><strong>{{ user.name }}</strong></p>
+                <p><strong>{{ userStore.user.name + ' ' + userStore.user.surname}}</strong></p>
 
                 <div class="mt-6 flex space-x-8 justify-around" v-if="user.id">
                     <RouterLink :to="{name: 'friends', params: {id: user.id}}" class="text-xs text-gray-500">{{ user.friends_count }} friends</RouterLink>
@@ -131,7 +131,7 @@ export default {
         this.getFeed()
     },
 
-    watch: { 
+    watch: {
         '$route.params.id': {
             handler: function() {
                 this.getFeed()

@@ -1,19 +1,6 @@
 <template>
     <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8">
-        <div class="main-left col-span-1">
-            <div class="p-4 bg-green-200 border border-gray-200 text-center rounded-xl">
-                <img src="https://detki.guru/wp-content/uploads/2021/01/epw9ilrwmaqwfla-e1609840777391.jpg" class="mb-6 rounded-tr-3xl rounded-b-xl">
-                
-                <p class="text-lg"><strong>Анастасия Шевченко</strong></p>
-
-                <div class="mt-6 flex space-x-8 justify-around">
-                    <p class="text-sm text-gray-600">189 друзей</p>
-                    <p class="text-sm text-gray-600">120 постов</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="main-center col-span-2 space-y-4">
+        <div class="main-center col-span-3 space-y-4">
             <div class="bg-green-200 border border-gray-200 rounded-xl">
                 <form v-on:submit.prevent="submitForm" method="post">
                     <div class="p-4">
