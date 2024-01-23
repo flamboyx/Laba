@@ -120,10 +120,8 @@ export default {
     data() {
         return {
             posts: [],
-            user: {
-                id: ''
-            },
-            can_send_friendship_request: null,
+            user: {},
+            body:''
         }
     },
 
