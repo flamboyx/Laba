@@ -9,6 +9,7 @@ export const useUserStore = defineStore({
             isAuthenticated: false,
             id: null,
             name: null,
+            surname: null,
             email: null,
             access: null,
             refresh: null,
@@ -27,6 +28,7 @@ export const useUserStore = defineStore({
                 this.user.refresh = localStorage.getItem('user.refresh')
                 this.user.id = localStorage.getItem('user.id')
                 this.user.name = localStorage.getItem('user.name')
+                this.user.surname = localStorage.getItem('user.surname')
                 this.user.email = localStorage.getItem('user.email')
                 this.user.avatar = localStorage.getItem('user.avatar')
                 this.user.isAuthenticated = true
@@ -58,6 +60,7 @@ export const useUserStore = defineStore({
             this.user.isAuthenticated = false
             this.user.id = null
             this.user.name = null
+            this.user.surname = null
             this.user.email = null
             this.user.avatar = null
 
@@ -65,6 +68,7 @@ export const useUserStore = defineStore({
             localStorage.setItem('user.refresh', '')
             localStorage.setItem('user.id', '')
             localStorage.setItem('user.name', '')
+            localStorage.setItem('user.surname', '')
             localStorage.setItem('user.email', '')
             localStorage.setItem('user.avatar', '')
         },
@@ -74,11 +78,13 @@ export const useUserStore = defineStore({
 
             this.user.id = user.id
             this.user.name = user.name
+            this.user.surname = user.surname
             this.user.email = user.email
             this.user.avatar = user.avatar
 
             localStorage.setItem('user.id', this.user.id)
             localStorage.setItem('user.name', this.user.name)
+            localStorage.setItem('user.surname', this.user.surname)
             localStorage.setItem('user.email', this.user.email)
             localStorage.setItem('user.avatar', this.user.avatar)
 
