@@ -68,6 +68,7 @@
 import axios from 'axios'
 import PeopleYouMayKnow from '../components/PeopleYouMayKnow.vue'
 import Trends from '../components/Trends.vue'
+import FeedItem from "../components/FeedItem.vue";
 
 export default {
     name: 'FeedView',
@@ -75,6 +76,7 @@ export default {
     components: {
         PeopleYouMayKnow,
         Trends,
+        FeedItem,
     },
 
     data() {

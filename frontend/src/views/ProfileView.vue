@@ -12,8 +12,7 @@
                 </div>
 
                 <div class="mt-6">
-                    <button 
-                        class="inline-block py-4 px-3 bg-violet-600 text-sm text-white rounded-xl"
+                    <button class="inline-block py-4 px-3 bg-violet-600 text-sm text-white rounded-xl"
                         @click="sendFriendshipRequest"
                         v-if="userStore.user.id !== user.id && can_send_friendship_request"
                     >
