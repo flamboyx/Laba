@@ -115,11 +115,7 @@ export default {
                         if (response.data.message === 'success') {
                             this.toastStore.showToast(5000, 'Пользователь зарегистрирован. Пожалуйста, войдите в аккаунт', 'bg-emerald-400')
 
-                            this.form.email = ''
-                            this.form.name = ''
-                            this.form.surname = ''
-                            this.form.password1 = ''
-                            this.form.password2 = ''
+                            this.$router.push('/login')
                         } else {
                             this.toastStore.showToast(5000, 'Что-то пошло не так. Пожалуйста, повторите ещё раз', 'bg-red-400')
                         }
