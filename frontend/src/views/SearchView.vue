@@ -28,7 +28,7 @@
                     </p>
 
                     <div class="mt-6 flex space-x-8 justify-around">
-                        <p class="text-sm text-gray-500">105 друзей</p>
+                        <p class="text-sm text-gray-500">{{ user.friends_count }} друзей</p>
                         <p class="text-sm text-gray-500">65 постов</p>
                     </div>
                 </div>
