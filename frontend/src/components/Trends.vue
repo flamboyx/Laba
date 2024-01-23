@@ -1,6 +1,6 @@
 <template>
 <div class="p-4 bg-green-200 border border-gray-200 rounded-xl">
-        <h3 class="mb-6 text-xl">Trends</h3>
+        <h3 class="mb-6 text-xl">Тренды</h3>
 
         <div class="space-y-4">
             <div class="flex items-center justify-between">
