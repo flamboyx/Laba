@@ -1,47 +1,47 @@
 <template>
     <div class="max-w-7xl mx-auto grid grid-cols-4 gap-4">
         <div class="main-left col-span-1">
-            <div class="p-4 bg-white border border-gray-200 text-center rounded-lg">
-                <img :src="user.get_avatar" class="mb-6 rounded-full">
+            <div class="p-4 bg-green-200 border border-gray-200 text-center rounded-xl">
+                <img :src="user.get_avatar" class="mb-6 rounded-tr-3xl rounded-b-xl">
                 
-                <p><strong>{{ userStore.user.name + ' ' + userStore.user.surname}}</strong></p>
+                <p><strong>{{ user.name + ' ' + user.surname}}</strong></p>
 
                 <div class="mt-6 flex space-x-8 justify-around" v-if="user.id">
-                    <RouterLink :to="{name: 'friends', params: {id: user.id}}" class="text-xs text-gray-500">{{ user.friends_count }} friends</RouterLink>
-                    <p class="text-xs text-gray-500">{{ user.posts_count }} posts</p>
+                    <RouterLink :to="{name: 'friends', params: {id: user.id}}" class="text-sm text-gray-600">{{ user.friends_count }} друзей</RouterLink>
+                    <p class="text-sm text-gray-600">{{ user.posts_count }} постов</p>
                 </div>
 
                 <div class="mt-6">
                     <button 
-                        class="inline-block py-4 px-3 bg-purple-600 text-xs text-white rounded-lg" 
+                        class="inline-block py-4 px-3 bg-violet-600 text-sm text-white rounded-xl"
                         @click="sendFriendshipRequest"
                         v-if="userStore.user.id !== user.id && can_send_friendship_request"
                     >
-                        Send friendship request
+                        Отправить запрос дружбы
                     </button>
 
                     <button 
-                        class="inline-block mt-4 py-4 px-3 bg-purple-600 text-xs text-white rounded-lg" 
+                        class="inline-block mt-4 py-4 px-3 bg-violet-600 text-sm text-white rounded-xl"
                         @click="sendDirectMessage"
                         v-if="userStore.user.id !== user.id"
                     >
-                        Send direct message
+                        Отправить сообщение
                     </button>
 
                     <RouterLink 
-                        class="inline-block mr-2 py-4 px-3 bg-purple-600 text-xs text-white rounded-lg" 
+                        class="inline-block mr-2 py-4 px-3 bg-violet-600 text-sm text-white rounded-xl"
                         to="/profile/edit"
                         v-if="userStore.user.id === user.id"
                     >
-                        Edit profile
+                        Изменить профиль
                     </RouterLink>
 
                     <button 
-                        class="inline-block py-4 px-3 bg-red-600 text-xs text-white rounded-lg" 
+                        class="inline-block py-4 px-3 bg-red-400 text-sm text-white rounded-xl"
                         @click="logout"
                         v-if="userStore.user.id === user.id"
                     >
-                        Log out
+                        Выйти
                     </button>
                 </div>
             </div>
@@ -49,7 +49,7 @@
 
         <div class="main-center col-span-2 space-y-4">
             <div 
-                class="bg-white border border-gray-200 rounded-lg"
+                class="bg-green-200 border border-gray-200 rounded-xl"
                 v-if="userStore.user.id === user.id"
             >
                 <FeedForm 
@@ -59,7 +59,7 @@
             </div>
 
             <div 
-                class="p-4 bg-white border border-gray-200 rounded-lg"
+                class="p-4 bg-green-100 border border-gray-200 rounded-xl"
                 v-for="post in posts"
                 v-bind:key="post.id"
             >
@@ -121,7 +121,7 @@ export default {
         return {
             posts: [],
             user: {},
-            body:''
+            body: '',
         }
     },
 
