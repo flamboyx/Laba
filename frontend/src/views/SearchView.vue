@@ -29,7 +29,7 @@
 
                     <div class="mt-6 flex space-x-8 justify-around">
                         <p class="text-sm text-gray-500">{{ user.friends_count }} друзей</p>
-                        <p class="text-sm text-gray-500">65 постов</p>
+                        <p class="text-sm text-gray-500">{{ user.posts_count }} постов</p>
                     </div>
                 </div>
             </div>

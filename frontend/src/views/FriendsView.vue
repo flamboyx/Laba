@@ -31,8 +31,8 @@
                     </p>
 
                     <div class="mt-6 flex space-x-8 justify-around">
-                        <p class="text-sm text-gray-500">{{ user.friends_count }} друзей</p>
-                        <p class="text-sm text-gray-500">65 постов</p>
+                        <p class="text-sm text-gray-500">{{ friendshipRequest.created_by.friends_count }} друзей</p>
+                        <p class="text-sm text-gray-500">{{ friendshipRequest.created_by.posts_count }} постов</p>
                     </div>
 
                     <div class="mt-6 space-x-4">
@@ -54,7 +54,7 @@
 
                     <div class="mt-6 flex space-x-8 justify-around">
                         <p class="text-sm text-gray-600">{{ user.friends_count }} друзей</p>
-                        <p class="text-sm text-gray-600">120 постов</p>
+                        <p class="text-sm text-gray-600">{{ user.posts_count }} постов</p>
                     </div>
                 </div>
             </div>

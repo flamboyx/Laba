@@ -1,29 +1,25 @@
 <template>
-    <div class="max-w-7xl mx-auto grid grid-cols-4 gap-4">
+    <div class="max-w-7xl mx-auto grid grid-cols-4 gap-8">
         <div class="main-center col-span-3 space-y-4">
-            <div 
-                class="p-4 bg-white border border-gray-200 rounded-lg"
-                v-if="post.id"
-            >
+            <div class="p-4 bg-green-100 border border-gray-200 rounded-xl" v-if="post.id">
                 <FeedItem v-bind:post="post" />
             </div>
 
-            <div
-                class="p-4 ml-6 bg-white border border-gray-200 rounded-lg"
+            <div class="p-4 ml-6 bg-green-100 border border-gray-200 rounded-xl"
                 v-for="comment in post.comments"
                 v-bind:key="comment.id"
             >
                 <CommentItem v-bind:comment="comment" />
             </div>
 
-            <div class="bg-white border border-gray-200 rounded-lg">
+            <div class="bg-green-200 border border-gray-200 rounded-xl">
                 <form v-on:submit.prevent="submitForm" method="post">
-                    <div class="p-4">  
-                        <textarea v-model="body" class="p-4 w-full bg-gray-100 rounded-lg" placeholder="What do you think?"></textarea>
+                    <div class="p-4">
+                        <textarea v-model="body" class="p-4 w-full bg-gray-100 rounded-xl" placeholder="Что вы думаете?"></textarea>
                     </div>
 
                     <div class="p-4 border-t border-gray-100">
-                        <button class="inline-block py-4 px-6 bg-purple-600 text-white rounded-lg">Comment</button>
+                        <button href="#" class="inline-block py-4 px-6 bg-violet-600 text-white rounded-xl">Комментировать</button>
                     </div>
                 </form>
             </div>

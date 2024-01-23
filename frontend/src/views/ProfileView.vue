@@ -166,9 +166,7 @@ export default {
                 .then(response => {
                     console.log('data', response.data)
 
-                    this.can_send_friendship_request = false
-
-                    if (response.data.message == 'request already sent') {
+                    if (response.data.message === 'request already sent') {
                         this.toastStore.showToast(5000, 'Запрос в друзья уже был отправлен', 'bg-red-400')
                     } else {
                         this.toastStore.showToast(5000, 'Запрос в друзья был отправлен', 'bg-emerald-400')
@@ -187,7 +185,6 @@ export default {
 
                     this.posts = response.data.posts
                     this.user = response.data.user
-                    this.can_send_friendship_request = response.data.can_send_friendship_request
                 })
                 .catch(error => {
                     console.log('error', error)
